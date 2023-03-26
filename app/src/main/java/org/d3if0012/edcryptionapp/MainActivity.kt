@@ -36,6 +36,13 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        binding.encodeResetBotton.setOnClickListener {
+            encodeReset()
+        }
+        binding.decodeResetBotton.setOnClickListener {
+            decodeReset()
+        }
+
     }
 
     private fun encode(){
@@ -77,12 +84,12 @@ class MainActivity : AppCompatActivity() {
         val encodeText = binding.encodeInput.text.toString()
 
         if (TextUtils.isEmpty(encodeText)){
-            Toast.makeText(this, "Isian Masih Kosong,Tidak dapat disalin", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Isian Masih Kosong,Tidak dapat disalin", Toast.LENGTH_SHORT).show()
         }else{
             val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText("text label", encodeText)
             clipboard.setPrimaryClip(clip)
-            Toast.makeText(this, "Text Disalin", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Text Disalin", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -92,15 +99,23 @@ class MainActivity : AppCompatActivity() {
         val decodeText = binding.decodeInput.text.toString()
 
         if (TextUtils.isEmpty(decodeText)){
-            Toast.makeText(this, "Isian Masih Kosong,Tidak dapat disalin", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Isian Masih Kosong,Tidak dapat disalin", Toast.LENGTH_SHORT).show()
         }else{
 
             val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText("text label", decodeText)
             clipboard.setPrimaryClip(clip)
-            Toast.makeText(this, "Text Disalin", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Text Disalin", Toast.LENGTH_SHORT).show()
         }
 
+    }
+
+    private fun encodeReset(){
+        binding.encodeInput.text = null
+    }
+
+    private fun decodeReset(){
+        binding.decodeInput.text = null
     }
 
 
