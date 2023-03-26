@@ -60,6 +60,7 @@
             android:layout_height="150dp"
             android:gravity="top"
             android:inputType="text|textMultiLine"
+            android:imeOptions="actionDone"
 
             />
 
@@ -116,6 +117,7 @@
             android:layout_height="150dp"
             android:gravity="top"
             android:inputType="text|textMultiLine"
+            android:imeOptions="actionDone"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
