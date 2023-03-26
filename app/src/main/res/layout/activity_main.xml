@@ -18,13 +18,23 @@
             android:id="@+id/textHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="EDcryptionApp"
-            android:textSize="20sp"
-            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/textHeader"
+            android:textSize="24sp"
+            android:fontFamily="@font/montserrat_semibold"
             android:textColor="@color/md_theme_light_onPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/subtextHeader"
+            app:layout_constraintTop_toBottomOf="@id/textHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/md_theme_light_onPrimary"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

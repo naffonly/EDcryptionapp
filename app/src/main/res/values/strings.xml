@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EDcryptionApp</string>
+    <string name="textHeader">EDcryptionApp</string>
+    <string name="subtextHeader">Decryption and Encryption Text</string>
 </resources>
