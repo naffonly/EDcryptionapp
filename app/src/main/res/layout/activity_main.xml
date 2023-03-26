@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/header_background"
@@ -26,6 +27,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
         <TextView
+            android:id="@+id/subtextHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
@@ -37,5 +39,119 @@
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/encrytionTextField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Encryption Text"
+        android:paddingTop="20dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/headerContent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="top"
+            android:inputType="text|textMultiLine"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/EncodeBotton"
+        android:text="Encode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        app:layout_constraintStart_toStartOf="@id/encrytionTextField"
+        app:layout_constraintTop_toBottomOf="@+id/encrytionTextField"
+    />
+    <Button
+        android:id="@+id/encodeCopyBotton"
+        android:text="Copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        app:layout_constraintStart_toEndOf="@+id/EncodeBotton"
+        app:layout_constraintTop_toBottomOf="@id/encrytionTextField"
+
+        />
+
+    <Button
+        android:id="@+id/encodeResetBotton"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintStart_toEndOf="@id/encodeCopyBotton"
+        app:layout_constraintTop_toBottomOf="@id/encrytionTextField"
+
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/decryptionTextField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Decryption Text"
+        android:paddingTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/EncodeBotton"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="top"
+            android:inputType="text|textMultiLine"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/decodeBotton"
+        android:text="Decode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        app:layout_constraintStart_toStartOf="@id/decryptionTextField"
+        app:layout_constraintTop_toBottomOf="@+id/decryptionTextField"
+        />
+    <Button
+        android:id="@+id/decodeCopyBotton"
+        android:text="Copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        app:layout_constraintStart_toEndOf="@+id/decodeBotton"
+        app:layout_constraintTop_toBottomOf="@id/decryptionTextField"
+
+        />
+
+    <Button
+        android:id="@+id/decodeResetBotton"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintStart_toEndOf="@id/decodeCopyBotton"
+        app:layout_constraintTop_toBottomOf="@id/decryptionTextField"
+
+        />
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
