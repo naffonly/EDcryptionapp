@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     private fun encode(){
         val encodeText = binding.encodeInput.text.toString()
         if (TextUtils.isEmpty(encodeText)){
-            Toast.makeText(this, "Text tidak Kosong", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Text Kosong", Toast.LENGTH_SHORT).show()
         }
 
         try {
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
     private fun decode(){
         val decodeText = binding.decodeInput.text.toString()
         if (TextUtils.isEmpty(decodeText)){
-            Toast.makeText(this, "Text tidak Kosong", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Text Kosong", Toast.LENGTH_SHORT).show()
         }
 
     try {
