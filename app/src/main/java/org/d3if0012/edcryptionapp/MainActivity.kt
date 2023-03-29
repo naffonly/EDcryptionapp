@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
     private fun decode(){
         val decodeText = binding.decodeInput.text.toString()
         if (TextUtils.isEmpty(decodeText)){
-            Toast.makeText(this, "Text Kosong", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Isian Text Kosong", Toast.LENGTH_SHORT).show()
         }
 
     try {
@@ -105,7 +105,7 @@ class MainActivity : AppCompatActivity() {
             val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText("text label", decodeText)
             clipboard.setPrimaryClip(clip)
-            Toast.makeText(this, "Text Disalin", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Isian Text Disalin", Toast.LENGTH_SHORT).show()
         }
 
     }
