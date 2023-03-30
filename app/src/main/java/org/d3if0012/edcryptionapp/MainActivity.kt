@@ -7,7 +7,6 @@ import android.text.TextUtils
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import org.d3if0012.edcryptionapp.databinding.ActivityMainBinding
-import org.w3c.dom.Text
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -52,9 +51,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         try {
-        val text = encodeText
-        val encoder: Base64.Encoder = Base64.getEncoder()
-        val encoded: String = encoder.encodeToString(text.toByteArray())
+            val encoder: Base64.Encoder = Base64.getEncoder()
+        val encoded: String = encoder.encodeToString(encodeText.toByteArray())
         binding.decodeInput.setText(encoded)
         }catch (e: Exception){
             e.printStackTrace()
@@ -69,9 +67,8 @@ class MainActivity : AppCompatActivity() {
         }
 
     try {
-        val dtext = decodeText
         val decoder: Base64.Decoder = Base64.getMimeDecoder()
-        val decoded  = String(decoder.decode(dtext))
+        val decoded  = String(decoder.decode(decodeText))
         binding.encodeInput.setText(decoded)
     }catch (e: Exception){
         e.printStackTrace()

@@ -1,5 +1,19 @@
 <resources>
-    <string name="app_name">EDcryptionApp</string>
+    <string name="app_name">EDcryptionApps</string>
     <string name="textHeader">EDcryptionApp</string>
     <string name="subtextHeader">Decryption and Encryption Text</string>
+    <string name="encryption_text">Encryption Text</string>
+    <string name="encode">Encode</string>
+    <string name="copyText">Copy</string>
+    <string name="resetText">Reset</string>
+    <string name="decryption_text">Decryption Text</string>
+    <string name="decode">Decode</string>
+    <string name="input_encryption_text">input encryption text</string>
+    <string name="encodeButton">Tombol Encode</string>
+    <string name="copyEncode">copy text encode</string>
+    <string name="resetTextEncode">reset text encode</string>
+    <string name="tombolDecodeText">tombol decode text</string>
+    <string name="copyTextDecode">copy text decode</string>
+    <string name="resetTextDecode">reset text decode</string>
+    <string name="inputDecodeText">input decode text</string>
 </resources>
