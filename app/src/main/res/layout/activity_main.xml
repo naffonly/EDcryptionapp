@@ -52,7 +52,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/encryption_text"
-        app:hintTextColor="@android:color/background_light"
         android:paddingTop="20dp"
         android:layout_marginHorizontal="16dp"
         app:layout_constraintTop_toBottomOf="@+id/headerContent"
@@ -62,7 +61,6 @@
             android:id="@+id/encodeInput"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-
             android:gravity="top"
             android:imeOptions="actionDone"
             android:inputType="text|textMultiLine" />
