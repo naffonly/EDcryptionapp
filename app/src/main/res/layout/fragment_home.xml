@@ -168,6 +168,31 @@
         />
 
 
+    <Button
+        android:id="@+id/historiButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/label_histori"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/decodeBotton"
+       app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/bagikanButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/bagikan"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="@id/historiButton"
+        app:layout_constraintTop_toBottomOf="@+id/historiButton"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -29,12 +29,7 @@ class HomeFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.menu_histori){
-            findNavController().navigate(
-                R.id.nav_home_to_histori
-            )
-            return true
-        }
+
 
         if (item.itemId == R.id.menu_about){
             findNavController().navigate(
@@ -60,6 +55,11 @@ class HomeFragment : Fragment() {
 
 
 
+        binding.historiButton.setOnClickListener {
+            findNavController().navigate(
+                R.id.nav_home_to_histori
+            )
+        }
         binding.EncodeBotton.setOnClickListener {
             encode()
         }

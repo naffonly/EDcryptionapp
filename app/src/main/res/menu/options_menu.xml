@@ -4,10 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     >
-    <item
-        android:id="@+id/menu_histori"
-        android:title="@string/label_histori"
-        app:showAsAction="never" />
 
     <item
         android:id="@+id/menu_about"
