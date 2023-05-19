@@ -21,4 +21,6 @@
     <string name="tentang_aplikasi">Tentang aplikasi</string>
     <string name="label_histori">Histori</string>
     <string name="bagikan">Bagikan</string>
+
+    <string name="data_bagikan_template">Data yang diEnkripsi\nText Encode : %1$s\nText Decode : %2$s\n Sutt ini Rahasia</string>
 </resources>

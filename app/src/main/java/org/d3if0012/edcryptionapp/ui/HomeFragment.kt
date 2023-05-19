@@ -2,11 +2,10 @@ package org.d3if0012.edcryptionapp.ui
 
 import android.content.ClipData
 import android.content.ClipboardManager
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.view.*
-import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
@@ -84,6 +83,10 @@ class HomeFragment : Fragment() {
             binding.decodeInput.text = null
 
         }
+
+        binding.bagikanButton.setOnClickListener {
+            shareData()
+        }
     }
 
     private  fun encodeCopy(){
@@ -145,6 +148,31 @@ class HomeFragment : Fragment() {
             e.printStackTrace()
             Toast.makeText(context, "Text tidak valid untuk di Decode", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun shareData(){
+
+
+        val encodeData = binding.encodeInput.text.toString()
+        val decodeData = binding.decodeInput.text.toString()
+
+        if (TextUtils.isEmpty(encodeData ) || TextUtils.isEmpty(decodeData)){
+            Toast.makeText(context, "Tidak dapat dibagikan, Tolong Isikan Terlebih Dahulu", Toast.LENGTH_SHORT).show()
+        }else{
+
+            val msg = getString(R.string.data_bagikan_template,encodeData,decodeData)
+            val shareIntent = Intent(Intent.ACTION_SEND)
+            shareIntent.setType("text/plain").putExtra(Intent.EXTRA_TEXT, msg)
+            if (shareIntent.resolveActivity(
+                    requireActivity().packageManager) != null) {
+                startActivity(shareIntent)
+            }
+        }
+
+
+
+
+
     }
 
     private fun showResult(result: DataEncryption?){
