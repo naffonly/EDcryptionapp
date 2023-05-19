@@ -16,4 +16,9 @@
     <string name="copyTextDecode">copy text decode</string>
     <string name="resetTextDecode">reset text decode</string>
     <string name="inputDecodeText">input decode text</string>
+    <string name="tidak_ada_data">tidak ada data</string>
+    <string name="about_app">Aplikasi Mobile Encode dan Decode mengunakan Algoritma Base64 Dalam Aplikasi ini mempunyai 3 fitur yaitu \n- Fitur Pengacakan kata dua arah dari encode ke decode dan decode ke encode \n- Copy text Dalam textfield \n- Reset text Dalam textfield \n\n\n\nCopyright © 2022 Naufal Adjie.\nAll rights reserved.</string>
+    <string name="tentang_aplikasi">Tentang aplikasi</string>
+    <string name="label_histori">Histori</string>
+    <string name="bagikan">Bagikan</string>
 </resources>

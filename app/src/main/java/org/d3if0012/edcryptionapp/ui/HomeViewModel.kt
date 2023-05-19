@@ -9,10 +9,13 @@ import androidx.core.content.ContextCompat.getSystemService
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import org.d3if0012.edcryptionapp.db.EdcDB
+import org.d3if0012.edcryptionapp.db.EdcDao
 import org.d3if0012.edcryptionapp.model.DataEncryption
 import java.util.*
 
-class HomeViewModel: ViewModel(){
+class HomeViewModel(): ViewModel(){
+
         private val textEncry = MutableLiveData<DataEncryption?>()
 
 

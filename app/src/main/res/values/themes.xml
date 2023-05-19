@@ -1,8 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.EDcryptionApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.EDcryptionApp" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <item name="android:windowLightStatusBar">false</item>
-
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/md_theme_light_primary</item>
         <item name="colorPrimaryVariant">@color/md_theme_light_tertiary</item>
@@ -14,5 +14,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyActionBar" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:background">@color/md_theme_light_primary</item>
     </style>
 </resources>

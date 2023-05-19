@@ -3,6 +3,8 @@ package org.d3if0012.edcryptionapp
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController : NavController
@@ -10,8 +12,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        navController = findNavController(R.id.myNavHostFragment)
-//        NavigationUI.setupActionBarWithNavController(this,navController)
+        navController = findNavController(R.id.myNavHostFragment)
+        NavigationUI.setupActionBarWithNavController(this,navController)
     }
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp()

@@ -5,13 +5,14 @@ import android.content.ClipboardManager
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import org.d3if0012.edcryptionapp.R
 import org.d3if0012.edcryptionapp.databinding.FragmentHomeBinding
 import org.d3if0012.edcryptionapp.model.DataEncryption
 
@@ -19,27 +20,45 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
 
     private val viewModel: HomeViewModel by lazy {
-        ViewModelProvider(this)[HomeViewModel::class.java]
         ViewModelProvider(requireActivity())[HomeViewModel::class.java]
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.options_menu, menu)
+    }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_histori){
+            findNavController().navigate(
+                R.id.nav_home_to_histori
+            )
+            return true
+        }
 
+        if (item.itemId == R.id.menu_about){
+            findNavController().navigate(
+                R.id.nav_home_to_about
+            )
+            return true
+        }
+        return  super.onOptionsItemSelected(item)
+    }
+
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
         binding = FragmentHomeBinding.inflate(layoutInflater,container, false)
+        setHasOptionsMenu(true)
         return binding.root
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        viewModel.getDataEncrytion().observe(this,{
-            showResult(it)
-        })
+        viewModel.getDataEncrytion().observe(requireActivity(), { showResult(it) })
+
+
 
         binding.EncodeBotton.setOnClickListener {
             encode()
@@ -66,15 +85,6 @@ class HomeFragment : Fragment() {
 
         }
     }
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        binding = ActivityMainBinding.inflate(layoutInflater)
-//        setContentView(binding.root)
-//
-//
-//
-//
-//    }
 
     private  fun encodeCopy(){
 
@@ -139,13 +149,9 @@ class HomeFragment : Fragment() {
 
     private fun showResult(result: DataEncryption?){
         if (result== null) return
-        Log.d("ACtivity",result.encode)
-        Log.d("DECtivity",result.decode)
         binding.encodeInput.setText(result.encode)
         binding.decodeInput.setText(result.decode)
     }
-
-
 
 
 }
