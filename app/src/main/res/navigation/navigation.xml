@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="org.d3if0012.edcryptionapp.ui.HomeFragment"
+        android:name="org.d3if0012.edcryptionapp.ui.home.HomeFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_home">
     <action

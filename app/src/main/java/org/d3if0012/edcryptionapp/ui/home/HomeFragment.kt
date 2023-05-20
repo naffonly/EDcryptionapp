@@ -1,10 +1,11 @@
-package org.d3if0012.edcryptionapp.ui
+package org.d3if0012.edcryptionapp.ui.home
 
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.core.content.ContextCompat.getSystemService
@@ -13,13 +14,16 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import org.d3if0012.edcryptionapp.R
 import org.d3if0012.edcryptionapp.databinding.FragmentHomeBinding
+import org.d3if0012.edcryptionapp.db.EdcDB
 import org.d3if0012.edcryptionapp.model.DataEncryption
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
 
     private val viewModel: HomeViewModel by lazy {
-        ViewModelProvider(requireActivity())[HomeViewModel::class.java]
+        val db = EdcDB.getInstance(requireContext())
+        val factory = HomeViewModelFactory(db.dao)
+        ViewModelProvider(this,factory)[HomeViewModel::class.java]
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -51,6 +55,10 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         viewModel.getDataEncrytion().observe(requireActivity(), { showResult(it) })
+        viewModel.data.observe(viewLifecycleOwner,{
+            if (it==null) return@observe
+            Log.d("HomeFragment","Data Tersimpan. ID = ${it.id}")
+        })
 
 
 
