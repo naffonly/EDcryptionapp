@@ -55,10 +55,6 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         viewModel.getDataEncrytion().observe(requireActivity(), { showResult(it) })
-        viewModel.data.observe(viewLifecycleOwner,{
-            if (it==null) return@observe
-            Log.d("HomeFragment","Data Tersimpan. ID = ${it.id}")
-        })
 
 
 

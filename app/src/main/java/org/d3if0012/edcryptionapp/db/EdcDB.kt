@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 
-@Database(entities = [EdcEntity::class], version = 1, exportSchema = false)
+@Database(entities = [EdcEntity::class], version = 2, exportSchema = false)
 abstract class EdcDB :RoomDatabase(){
         abstract val dao : EdcDao
         companion object{

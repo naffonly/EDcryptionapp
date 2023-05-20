@@ -11,5 +11,6 @@ data class EdcEntity(
     var id: Long = 0L,
     var tanggal : Long = System.currentTimeMillis(),
     var encode : String,
-    var decode : String
+    var decode : String,
+    var isEncode : Boolean
 )

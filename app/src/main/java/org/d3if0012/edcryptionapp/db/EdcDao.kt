@@ -12,7 +12,7 @@ interface EdcDao {
     @Insert
     fun insert(edc: EdcEntity)
 
-    @Query("SELECT * FROM edc_main ORDER BY id DESC LIMIT 1")
-    fun getLastData():LiveData<EdcEntity?>
+    @Query("SELECT * FROM edc_main ORDER BY id DESC")
+    fun getLastData():LiveData<List<EdcEntity>>
 
 }

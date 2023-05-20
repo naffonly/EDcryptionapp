@@ -10,49 +10,43 @@ import kotlinx.coroutines.withContext
 import org.d3if0012.edcryptionapp.db.EdcDao
 import org.d3if0012.edcryptionapp.db.EdcEntity
 import org.d3if0012.edcryptionapp.model.DataEncryption
+import org.d3if0012.edcryptionapp.model.onDecode
+import org.d3if0012.edcryptionapp.model.onEncode
 import java.util.*
 
 class HomeViewModel(private val db: EdcDao): ViewModel(){
 
         private val textEncry = MutableLiveData<DataEncryption?>()
-    val data = db.getLastData()
 
 
      fun onEncode(encodeData:String,decodeData : String) {
 
-        val encodeText = encodeData
-        val decodeText = decodeData
+         val dataEncrip = EdcEntity(
+             encode = encodeData,
+             decode = decodeData,
+             isEncode = true
+         )
 
-        val encoder: Base64.Encoder = Base64.getEncoder()
-        val encoded: String = encoder.encodeToString(encodeText.toByteArray())
-
-        textEncry.value = DataEncryption(encodeText,encoded)
+        textEncry.value = dataEncrip.onEncode()
 
          viewModelScope.launch {
              withContext(Dispatchers.IO){
-                 val dataEncrip = EdcEntity(
-                     encode = encodeText,
-                     decode = encoded
-                 )
                  db.insert(dataEncrip)
              }
          }
     }
 
      fun onDecode(encodeData:String,decodeData : String){
-        val  encodeText =  encodeData
-        val decodeText = decodeData
 
-        val decoder: Base64.Decoder = Base64.getMimeDecoder()
-        val decoded  = String(decoder.decode(decodeText))
+         val dataEncrip = EdcEntity(
+             encode = encodeData,
+             decode = decodeData,
+             isEncode = false
+         )
 
-        textEncry.value = DataEncryption(decoded,decodeText)
+        textEncry.value = dataEncrip.onDecode()
          viewModelScope.launch {
              withContext(Dispatchers.IO){
-                 val dataEncrip = EdcEntity(
-                     encode = decoded,
-                     decode = decodeText
-                 )
                  db.insert(dataEncrip)
              }
          }
