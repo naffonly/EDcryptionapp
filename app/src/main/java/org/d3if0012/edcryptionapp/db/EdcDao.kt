@@ -19,6 +19,9 @@ interface EdcDao {
     @Query("DELETE FROM edc_main")
     fun clearData()
 
+
+    @Query("DELETE FROM EDC_MAIN where id = :id")
+    fun deleteDataById(id:Long)
    @Delete
     fun deleteData(edc:EdcEntity)
 }

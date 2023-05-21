@@ -129,13 +129,13 @@ class HomeFragment : Fragment() {
         val decodeText = binding.decodeInput.text.toString()
         if (TextUtils.isEmpty(encodeText)){
             Toast.makeText(context, "Text Kosong", Toast.LENGTH_SHORT).show()
-        }
-
-        try {
-           viewModel.onEncode(encodeText,decodeText)
-        }catch (e: Exception){
-            e.printStackTrace()
-            Toast.makeText(context, "Text tidak valid untuk di Encode", Toast.LENGTH_SHORT).show()
+        }else{
+            try {
+               viewModel.onEncode(encodeText,decodeText)
+            }catch (e: Exception){
+                e.printStackTrace()
+                Toast.makeText(context, "Text tidak valid untuk di Encode", Toast.LENGTH_SHORT).show()
+             }
         }
     }
 
@@ -144,13 +144,14 @@ class HomeFragment : Fragment() {
         val decodeText = binding.decodeInput.text.toString()
         if (TextUtils.isEmpty(decodeText)){
             Toast.makeText(context, "Isian Text Kosong", Toast.LENGTH_SHORT).show()
-        }
-
-        try {
-            viewModel.onDecode(encodeText,decodeText)
-        }catch (e: Exception){
-            e.printStackTrace()
-            Toast.makeText(context, "Text tidak valid untuk di Decode", Toast.LENGTH_SHORT).show()
+        }else {
+            try {
+                viewModel.onDecode(encodeText, decodeText)
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(context, "Text tidak valid untuk di Decode", Toast.LENGTH_SHORT)
+                    .show()
+            }
         }
     }
 
