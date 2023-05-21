@@ -5,12 +5,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import org.d3if0012.edcryptionapp.databinding.ItemHistoryBinding
 import org.d3if0012.edcryptionapp.db.EdcEntity
 import org.d3if0012.edcryptionapp.model.onDecode
 import org.d3if0012.edcryptionapp.model.onEncode
 import java.text.SimpleDateFormat
 import java.util.*
+
 
 class HistoriAdapter: ListAdapter<EdcEntity, HistoriAdapter.ViewHolder>(DIFF_CALLBACK) {
 
@@ -42,10 +46,14 @@ class HistoriAdapter: ListAdapter<EdcEntity, HistoriAdapter.ViewHolder>(DIFF_CAL
                 encodeText.text = rs.encode
                 decodeText.text = rs.decode
                 tglText.text = dataFormatter.format(Date(item.tanggal))
+                idBtn.setOnClickListener {
+                }
+
 
 
         }
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -57,7 +65,8 @@ class HistoriAdapter: ListAdapter<EdcEntity, HistoriAdapter.ViewHolder>(DIFF_CAL
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         holder.bind(getItem(position))
-
     }
+
+
 
 }

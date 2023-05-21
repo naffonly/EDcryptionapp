@@ -21,6 +21,10 @@
     <string name="tentang_aplikasi">Tentang aplikasi</string>
     <string name="label_histori">Histori</string>
     <string name="bagikan">Bagikan</string>
-
+    <string name="konfirmasi_hapus">Hapus semua histori?</string>
+    <string name="hapus">Hapus</string>
+    <string name="batal">Batal</string>
     <string name="data_bagikan_template">Data yang diEnkripsi\nText Encode : %1$s\nText Decode : %2$s\n Sutt ini Rahasia</string>
+    <string name="hapus_histori">hapus histori</string>
+    <string name="switch_layout">Ubah tampilan</string>
 </resources>

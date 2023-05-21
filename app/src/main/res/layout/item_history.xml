@@ -33,5 +33,14 @@
         app:layout_constraintStart_toStartOf="@id/encodeText"
         />
 
+    <Button
+        android:id="@+id/idBtn"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        android:drawableEnd="@drawable/baseline_delete_forever_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
