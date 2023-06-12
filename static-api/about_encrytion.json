@@ -1,0 +1,27 @@
+[
+  {
+    "judul": "Enkripsi Base64",
+    "desc": "Base64 merupakan metode enkripsi yang menerjemahkan data biner yang berbentuk ASCII (American Standard Code for Information). Base64 merupakan format yang dicetak menggunakan karakter, memungkinkan binary data yang akan dikirim dalam bentuk email, dan akan disimpan di database atau file. Base64 digunakan untuk menyembunyikan data penting, password, dan lainnya agar bisa disamarkan keasliannya",
+    "imgId": "base64"
+  },
+  {
+    "judul": "Enkripsi MD2",
+    "desc": "Message-Digest Algorithm 2 atau yang dikenal dengan MD2, merupakan jenis enkripsi yang banyak digunakan pada komputer 8-bit, sesuai dengan standar internet yang ditetapkan oleh RFC 1319. Enkripsi MD2 biasa digunakan pada infrastruktur kunci publik dan masih digunakan hingga tahun 2004.",
+    "imgId": "md2"
+  },
+  {
+    "judul": "Enkripsi MD4",
+    "desc": "MD4 merupakan pengembangan dari MD2 dengan jumlah panjang bit sebanyak 128-bit. MD4 umum digunakan untuk menghitung NT-hash (hasil enkripsi) ringkasan password pada Microsoft Windows NT, XP, dan Vista. Hash sendiri merupakan algoritma yang mengubah data informasi berupa huruf, angka menjadi karakter terenkripsi dengan ukuran yang sama. Hash biasa digunakan untuk password hashing (menyembunyikan password). Algoritma hash yang umum digunakan yaitu pada metode MD5 dan SHA1",
+    "imgId": "md4"
+  },
+  {
+    "judul": "Enkripsi MD5",
+    "desc": "Selain MD5, SHA (Secure Hashing Algorithm) juga merupakan serangkaian metode kriptografi yang dirancang langsung oleh National Security Agency (NSA) yang diterbitkan oleh NIST untuk menjaga keamanan data. Jika terjadi peretasan data, maka SHA dapat melindungi dengan cara memberikan hash yang tidak dapat dibaca tanpa adanya deskripsi atau kunci.",
+    "imgId": "md5"
+  },
+  {
+    "judul": "Enkripsi RC4",
+    "desc": "RC4 adalah penyandian stream cipher di mana proses enkripsi dan dekripsi dilakukan dengan cara bit per bit. RC4 dibuat untuk mengamankan RSA dan dibuat oleh Ron Rivest pada tahun 1987.",
+    "imgId": "rc4"
+  }
+]
