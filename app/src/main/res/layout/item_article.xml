@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <ImageView
+        android:id="@+id/imgArticle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:src="@drawable/base64"
+        />
+    
+    <TextView
+        android:layout_marginTop="5dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:id="@+id/tittleArticle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imgArticle"
+        app:layout_constraintStart_toStartOf="@id/imgArticle"
+        app:layout_constraintEnd_toEndOf="@+id/imgArticle"
+        android:textAlignment="center"
+        tools:text="Judul"/>
+
+
+    <TextView
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        android:id="@+id/descArticle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tittleArticle"
+        app:layout_constraintStart_toStartOf="@id/imgArticle"
+        app:layout_constraintEnd_toEndOf="@+id/imgArticle"
+        android:justificationMode="inter_word"
+        tools:text="Base64 merupakan metode enkripsi yang menerjemahkan data biner yang berbentuk ASCII (American Standard Code for Information). Base64 merupakan format yang dicetak menggunakan karakter, memungkinkan binary data yang akan dikirim dalam bentuk email, dan akan disimpan di database atau file. Base64 digunakan untuk menyembunyikan data penting, password, dan lainnya agar bisa disamarkan keaslianny"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

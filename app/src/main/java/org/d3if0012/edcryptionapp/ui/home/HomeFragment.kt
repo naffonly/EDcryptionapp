@@ -34,6 +34,11 @@ class HomeFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
 
+        if(item.itemId == R.id.menu_article){
+            findNavController().navigate(
+                R.id.nav_home_to_article
+            )
+        }
         if (item.itemId == R.id.menu_about){
             findNavController().navigate(
                 R.id.nav_home_to_about

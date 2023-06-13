@@ -27,4 +27,6 @@
     <string name="data_bagikan_template">Data yang diEnkripsi\nText Encode : %1$s\nText Decode : %2$s\n Sutt ini Rahasia</string>
     <string name="hapus_histori">hapus histori</string>
     <string name="switch_layout">Ubah tampilan</string>
+    <string name="article">Article</string>
+    <string name="koneksi_error">tidak ada koneksi</string>
 </resources>
