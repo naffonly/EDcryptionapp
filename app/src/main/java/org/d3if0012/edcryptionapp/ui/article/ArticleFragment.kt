@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import org.d3if0012.edcryptionapp.R
 import org.d3if0012.edcryptionapp.databinding.FragmentArticleBinding
+import org.d3if0012.edcryptionapp.network.ApiStatus
 
 class ArticleFragment : Fragment() {
 
@@ -41,24 +42,24 @@ class ArticleFragment : Fragment() {
             myAdapter.updateData(it)
         }
 
-//        viewModel.getStatus().observe(viewLifecycleOwner){
-//            updateProgress(it)
-//        }
+        viewModel.getStatus().observe(viewLifecycleOwner){
+            updateProgress(it)
+        }
     }
 
-//    private fun updateProgress(status: ApiStatus) {
-//        when (status) {
-//            ApiStatus.LOADING -> {
-//                binding.progressBar.visibility = View.VISIBLE
-//            }
-//            ApiStatus.SUCCESS -> {
-//                binding.progressBar.visibility = View.GONE
-//            }
-//            ApiStatus.FAILED -> {
-//                binding.progressBar.visibility = View.GONE
-//                binding.networkError.visibility = View.VISIBLE
-//            }
-//        }
-//    }
+    private fun updateProgress(status: ApiStatus) {
+        when (status) {
+            ApiStatus.LOADING -> {
+                binding.progressBar.visibility = View.VISIBLE
+            }
+            ApiStatus.SUCCESS -> {
+                binding.progressBar.visibility = View.GONE
+            }
+            ApiStatus.FAILED -> {
+                binding.progressBar.visibility = View.GONE
+                binding.networkError.visibility = View.VISIBLE
+            }
+        }
+    }
 
 }

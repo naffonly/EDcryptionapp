@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="10dp"
     >
 
     <ImageView
@@ -14,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:src="@drawable/baseline_broken_image_24"
-        tools:tint="@color/md_theme_light_primary" />
+        tools:tint="?android:attr/colorPrimary" />
     
     <TextView
         android:layout_marginTop="5dp"
@@ -29,7 +30,6 @@
         android:textAlignment="center"
         tools:text="Judul"/>
 
-
     <TextView
         android:padding="10dp"
         android:layout_marginTop="5dp"
@@ -38,10 +38,10 @@
         android:id="@+id/descArticle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
         app:layout_constraintTop_toBottomOf="@id/tittleArticle"
         app:layout_constraintStart_toStartOf="@id/imgArticle"
         app:layout_constraintEnd_toEndOf="@+id/imgArticle"
-        android:justificationMode="inter_word"
         tools:text="Base64 merupakan metode enkripsi yang menerjemahkan data biner yang berbentuk ASCII (American Standard Code for Information). Base64 merupakan format yang dicetak menggunakan karakter, memungkinkan binary data yang akan dikirim dalam bentuk email, dan akan disimpan di database atau file. Base64 digunakan untuk menyembunyikan data penting, password, dan lainnya agar bisa disamarkan keaslianny"/>
 
 
