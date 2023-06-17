@@ -61,6 +61,7 @@ class HomeFragment : Fragment() {
 
         viewModel.getDataEncrytion().observe(requireActivity(), { showResult(it) })
 
+        viewModel.scheduleUpdater(requireActivity().application)
 
 
         binding.historiButton.setOnClickListener {
@@ -101,7 +102,6 @@ class HomeFragment : Fragment() {
     private  fun encodeCopy(){
 
         val encodeText = binding.encodeInput.text.toString()
-
         if (TextUtils.isEmpty(encodeText)){
             Toast.makeText(context, "Isian Masih Kosong,Tidak dapat disalin", Toast.LENGTH_SHORT).show()
         }else{

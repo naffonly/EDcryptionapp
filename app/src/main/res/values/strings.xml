@@ -29,4 +29,16 @@
     <string name="switch_layout">Ubah tampilan</string>
     <string name="article">Article</string>
     <string name="koneksi_error">tidak ada koneksi</string>
+
+    <!--    Updater -->
+    <string name="channel_name">Updater</string>
+    <string name="channel_desc">Update artikel otomatis</string>
+    <string name="notif_title">Atikel Terbaru Muncul!</string>
+    <string name="notif_text">Mari Mengenal Lebih Lanjut..</string>
+
+    <!--    Getting Start App -->
+    <string name="channel_name_getStart">Get Start</string>
+    <string name="channel_desc_getStart">Aplikasi siap membuat pesan rahasia</string>
+    <string name="notif_title_getStart">Pesan Rahasia Menunggu</string>
+    <string name="notif_text_getStart">Buat pesan rahasia dan kirimkan pesan tersebut..</string>
 </resources>
